@@ -1,0 +1,57 @@
+* {
+  list-style: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* NAV CSS */
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.navbar .um,
+.dois,
+.três {
+  padding: 5px 30px;
+  border-radius: 10%;
+  text-decoration: none;
+  color: white;
+  background-color: #635985;
+}
+.um {
+  margin-right: 30px;
+}
+.três {
+  margin-left: 30px;
+}
+.navbar link {
+  display: flex;
+}
+
+/* HOME CSS */
+.homecontainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+.searchform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchform button {
+  width: 100px;
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
