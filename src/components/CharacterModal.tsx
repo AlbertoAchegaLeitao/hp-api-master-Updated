@@ -16,54 +16,98 @@ export const CharacterModal = ({
   const [isOpen, setIsOpen] = useState(true);
 
   const handleCloseModal = () => {
+    console.log("handleCloseModal called");
     setIsOpen(false);
     closeModal();
     onAfterClose();
   };
 
+  if (!character) return null;
+
   const customStyles = {
     content: {
-      top: "50%",
+      top: 50,
+      bottom: 50,
       left: "50%",
       right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
+      transform: "translateX(-50%)",
+      width: "350px",
+      borderRadius: "30px",
+      backgroundColor: "white",
+      border: "3px solid black",
     },
   };
-
-  if (!character) return null;
 
   return (
     <ReactModal
       isOpen={isOpen}
-      style={customStyles}
       onRequestClose={handleCloseModal}
       contentLabel={character.name}
+      appElement={document.getElementById("root")!}
+      style={customStyles}
     >
-      <div className="x">
+      <div className="modalcontent">
         <h2>{character.name}</h2>
+
         <img src={character.image} alt={character.name} />
-        <p>Species: {character.species}</p>
-        <p>Gender: {character.gender}</p>
-        <p>House: {character.house}</p>
-        <p>Date of Birth: {character.dateOfBirth}</p>
-        <p>Year of Birth: {character.yearOfBirth}</p>
-        <p>Ancestry: {character.ancestry}</p>
-        <p>Eye Colour: {character.eyeColour}</p>
-        <p>Hair Colour: {character.hairColour}</p>
-        <p>Wand:</p>
+
+        <p>
+          <span>Species:</span> {character.species}
+        </p>
+        <p>
+          <span>Gender:</span> {character.gender}
+        </p>
+        <p>
+          <span>House:</span> {character.house}
+        </p>
+        <p>
+          <span>Date of Birth:</span> {character.dateOfBirth}
+        </p>
+        <p>
+          <span>Year of Birth:</span> {character.yearOfBirth}
+        </p>
+        <p>
+          <span>Ancestry:</span> {character.ancestry}
+        </p>
+        <p>
+          <span>Eye Colour:</span> {character.eyeColour}
+        </p>
+        <p>
+          <span>Hair Colour:</span> {character.hairColour}
+        </p>
+        <p>
+          <span>Wand:</span>
+        </p>
         <ul>
-          <li>Wood: {character.wand.wood}</li>
-          <li>Core: {character.wand.core}</li>
-          <li>Length: {character.wand.length}</li>
+          <li>
+            <span>Wood:</span> {character.wand.wood}
+          </li>
+          <li>
+            <span>Core:</span> {character.wand.core}
+          </li>
+          <li>
+            <span>Length:</span> {character.wand.length}
+          </li>
         </ul>
-        <p>Patronus: {character.patronus}</p>
-        <p>Hogwarts Student: {character.hogwartsStudent ? "Yes" : "No"}</p>
-        <p>Hogwarts Staff: {character.hogwartsStaff ? "Yes" : "No"}</p>
-        <p>Actor: {character.actor}</p>
-        <p>Alive: {character.alive ? "Yes" : "No"}</p>
-        <button onClick={handleCloseModal}>Close</button>
+        <p>
+          <span>Patronus:</span> {character.patronus}
+        </p>
+        <p>
+          <span>Hogwarts Student:</span>{" "}
+          {character.hogwartsStudent ? "Yes" : "No"}
+        </p>
+        <p>
+          <span>Hogwarts Staff:</span> {character.hogwartsStaff ? "Yes" : "No"}
+        </p>
+        <p>
+          <span>Actor:</span> {character.actor}
+        </p>
+        <p>
+          <span>Alive:</span> {character.alive ? "Yes" : "No"}
+        </p>
+        <button className="modalbtn" onClick={handleCloseModal}>
+          Close
+        </button>
       </div>
     </ReactModal>
   );
