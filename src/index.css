@@ -7,6 +7,7 @@ body {
 }
 
 /* MODAL */
+
 .modalcontent h2 {
   text-align: center;
   font-size: 40px;
@@ -83,6 +84,7 @@ body {
 }
 
 /* HOME CSS */
+
 .homecontainer {
   height: 100vh;
   display: flex;
@@ -105,4 +107,20 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* SEARCH BUTTON */
+/* -------------------------------- */
+/* -------------------------------- */
+.homebtn {
+  background-color: blue;
+  box-shadow: 5px 5px 0px blue;
+  background-position: -5px -5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.homebtn:hover {
+  box-shadow: 0 0 0px blue;
+  background-color: blue;
+  background-position: 0 0;
 }

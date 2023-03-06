@@ -22,7 +22,7 @@ const Home = () => {
           onChange={(event) => setSearchValue(event.target.value)}
         />
 
-        <button type="submit">Search</button>
+        <button className="homebtn" type="submit">Search</button>
       </form>
       {submitted && characters.length === 0 ? (
         <p>No character found with name "{searchValue}".</p>

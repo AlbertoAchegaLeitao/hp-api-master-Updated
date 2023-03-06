@@ -34,6 +34,7 @@ export const CharacterModal = ({
       width: "350px",
       borderRadius: "30px",
       backgroundColor: "white",
+      /* overflow: "hidden", */
       border: "3px solid black",
     },
   };
