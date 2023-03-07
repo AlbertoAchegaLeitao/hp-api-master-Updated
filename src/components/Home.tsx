@@ -19,10 +19,12 @@ const Home = () => {
           type="text"
           placeholder="Search Character"
           value={searchValue}
-          onChange={(event) => setSearchValue(event.target.value)}
+          onChange={(event) => setSearchValue(event.target.value.toLowerCase())}
         />
 
-        <button className="homebtn" type="submit">Search</button>
+        <button className="homebtn" type="submit">
+          Search
+        </button>
       </form>
       {submitted && characters.length === 0 ? (
         <p>No character found with name "{searchValue}".</p>

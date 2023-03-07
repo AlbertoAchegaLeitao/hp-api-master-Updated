@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import { Character } from "../services/types";
 
@@ -13,7 +13,10 @@ export const CharacterModal = ({
   closeModal,
   onAfterClose,
 }: Props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    setIsOpen(true);
+  }, [character]);
 
   const handleCloseModal = () => {
     console.log("handleCloseModal called");
