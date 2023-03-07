@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #2e4f4f !important;
 }
 
 /* NAV CSS */
@@ -16,6 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
+  z-index: 100;
 }
 .navbar .um,
 .dois,
@@ -156,30 +158,33 @@ body {
   height: 100vh;
   color: white;
 }
+
 .about h2 {
   text-align: center;
   font-size: 40px;
-  padding: 24px;
+  padding-top: 20px;
 }
+
 .aboutwrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2c3333;
   border: 5px solid #0e8388;
   width: 900px;
   height: 600px;
   border-radius: 50px;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 30px 30px 15px #2c3333;
 }
+
 .abouttext {
   width: 400px;
   font-size: 20px;
 }
+
 .aboutimg {
   width: 400px;
   height: 400px;
@@ -187,4 +192,75 @@ body {
   object-position: 55% center;
   border-radius: 50%;
   border: 5px solid #0e8388;
+}
+
+/* Media query for screens below 1000px */
+@media screen and (max-width: 1000px) {
+  .aboutwrapper {
+    flex-direction: column-reverse;
+    width: 80%;
+    height: auto;
+    margin: 50px auto;
+    padding: 50px;
+    border-width: 3px;
+  }
+
+  .abouttext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutimg {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 55% center;
+    border-radius: 50%;
+    border: 3px solid #0e8388;
+    margin-top: 30px;
+  }
+}
+
+/*  Media query for screens below 730px  */
+
+@media screen and (max-width: 730px) {
+  .about {
+    height: auto;
+  }
+  .about h2 {
+    padding: 0 2%;
+  }
+
+  .aboutwrapper {
+    width: 90%;
+    margin: 20px auto;
+    flex-direction: column-reverse;
+  }
+
+  .aboutimg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/*  Media query for screens below 430px  */
+
+@media screen and (max-width: 430px) {
+  .about {
+    height: auto;
+  }
+  .about h2 {
+    padding: 0 2%;
+  }
+
+  .aboutwrapper {
+    width: 90%;
+    margin: 150px auto;
+    flex-direction: column-reverse;
+  }
+
+  .aboutimg {
+    width: 200px;
+    height: 200px;
+  }
 }
