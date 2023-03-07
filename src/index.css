@@ -52,7 +52,9 @@ body {
 /* ------------------------------------------ */
 
 /* MODAL */
-
+.modalcontent{
+  color: white;
+}
 .modalcontent h2 {
   text-align: center;
   font-size: 40px;
@@ -72,13 +74,13 @@ body {
 }
 
 .modalbtn {
-  background-color: #c2fbd7;
+  background-color: #cbe4de;
   border-radius: 100px;
   box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
     rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
     rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
     rgba(44, 187, 99, 0.15) 0 16px 32px;
-  color: green;
+  color: #2e4f4f;
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
@@ -213,12 +215,15 @@ input::placeholder {
   background-color: #2e4f4f;
   height: 100vh;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .about h2 {
   text-align: center;
   font-size: 40px;
-  padding-top: 20px;
 }
 
 .aboutwrapper {
@@ -229,12 +234,11 @@ input::placeholder {
   width: 900px;
   height: 600px;
   border-radius: 50px;
-  position: absolute;
-  top: 60%;
+  /*  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   box-shadow: 30px 30px 15px #2c3333;
-  z-index: -1;
 }
 
 .abouttext {
@@ -320,4 +324,25 @@ input::placeholder {
     width: 200px;
     height: 200px;
   }
+}
+/* -------------------------------- */
+/* -------------------------------- */
+/* Contact */
+/* -------------------------------- */
+/* -------------------------------- */
+.contact {
+  text-align: center;
+  padding-top: 200px;
+  color: white;
+  font-size: 20px;
+}
+.contact h2 {
+  font-size: 30px;
+}
+
+.contact span {
+  font-size: 25px;
+}
+.contact hr {
+  width: 200px;
 }

@@ -36,10 +36,9 @@ export const CharacterModal = ({
       transform: "translateX(-50%)",
       width: "350px",
       borderRadius: "30px",
-      backgroundColor: "white",
+      backgroundColor: "#0E8388",
       /* overflow: "hidden", */
-      border: "3px solid black",
-      zIndex: "101",
+      border: "3px solid #CBE4DE",
     },
   };
 
