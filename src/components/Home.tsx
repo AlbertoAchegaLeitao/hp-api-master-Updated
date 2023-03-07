@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useCharacterSearch } from "../services/getapi";
 import { CharacterModal } from "./CharacterModal";
 
@@ -26,6 +25,7 @@ const Home = () => {
         <div className="box-1">
           <div className="btn btn-one">
             <span>Search</span>
+            
           </div>
         </div>
       </form>

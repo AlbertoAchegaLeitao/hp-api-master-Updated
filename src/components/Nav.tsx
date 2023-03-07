@@ -14,7 +14,6 @@ const Nav = () => {
       <Link to="/contact" className="três">
         Contact
       </Link>
-      <button className="modebtn">M</button>
     </div>
   );
 };

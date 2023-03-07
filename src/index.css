@@ -29,19 +29,10 @@ body {
   background-color: #2e4f4f;
   border: 1px solid #0e8388;
 }
-.modebtn {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: #2e4f4f;
-  border: 1px solid #0e8388;
-  color: white;
-}
 
 .navbar .um,
 .dois,
-.três,
-.modebtn {
+.três {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -52,7 +43,7 @@ body {
 /* ------------------------------------------ */
 
 /* MODAL */
-.modalcontent{
+.modalcontent {
   color: white;
 }
 .modalcontent h2 {
@@ -85,7 +76,7 @@ body {
   display: inline-block;
   font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
-  text-align: center;
+  /* text-align: center; */
   text-decoration: none;
   transition: all 250ms;
   border: 0;
@@ -93,6 +84,10 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .modalbtn:hover {
@@ -101,6 +96,12 @@ body {
     rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
     rgba(44, 187, 99, 0.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
+}
+
+.modalbtn2 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* HOME CSS */
