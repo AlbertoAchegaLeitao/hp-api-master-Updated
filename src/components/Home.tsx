@@ -23,9 +23,11 @@ const Home = () => {
           onChange={(event) => setSearchValue(event.target.value.toLowerCase())}
         />
 
-        <button className="homebtn" type="submit">
-          Search
-        </button>
+        <div className="box-1">
+          <div className="btn btn-one">
+            <span>Search</span>
+          </div>
+        </div>
       </form>
       {submitted && characters.length === 0 ? (
         <p>No character found with name "{searchValue}".</p>

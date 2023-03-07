@@ -39,6 +39,7 @@ export const CharacterModal = ({
       backgroundColor: "white",
       /* overflow: "hidden", */
       border: "3px solid black",
+      zIndex: "101",
     },
   };
 
