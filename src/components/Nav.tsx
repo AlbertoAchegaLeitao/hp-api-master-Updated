@@ -5,15 +5,26 @@ import "semantic-ui-css/semantic.min.css";
 const Nav = () => {
   return (
     <div className="navbar">
-      <Link to="/" className="active um">
-        Home
-      </Link>
-      <Link to="/about" className="dois">
-        About
-      </Link>
-      <Link to="/contact" className="três">
-        Contact
-      </Link>
+      <div className="linkwrapper">
+        <Link to="/" className="active um">
+          Home
+        </Link>
+        <Link to="/about" className="dois">
+          About
+        </Link>
+        <Link to="/contact" className="três">
+          Contact
+        </Link>
+      </div>
+
+      <div className="modebtn">
+        <input type="checkbox" className="checkbox" id="checkbox" />
+        <label htmlFor="checkbox" className="label">
+          <i className="darkmode"></i>
+          <i className="lightmode"></i>
+          <div className="ball"></div>
+        </label>
+      </div>
     </div>
   );
 };

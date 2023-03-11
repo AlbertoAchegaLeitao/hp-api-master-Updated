@@ -7,7 +7,55 @@ body {
   padding: 0;
   background-color: #2e4f4f !important;
 }
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
 
+/* MODE BTN */
+
+.modebtn {
+  display: inline-flex; /* change display to inline-flex */
+  align-items: center;
+  height: 100%;
+}
+.checkbox {
+  opacity: 0;
+}
+.label {
+  width: 30px;
+  height: 20px;
+  background-color: #111;
+  display: block;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 5px; */
+  position: relative;
+  transform: scale(1.5);
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear, background-color 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(10px);
+  background-color: white;
+}
+
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
 /* NAV CSS */
 .navbar {
   background-color: #2c3333;
@@ -32,9 +80,19 @@ body {
 
 .navbar .um,
 .dois,
-.três {
+.três,
+.modebtn {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
 }
 
 /* -- */
