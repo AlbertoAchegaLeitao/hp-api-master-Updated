@@ -17,12 +17,15 @@ export const useCharacterSearch = () => {
 
     if (!searchValue) return;
 
+    const lowercaseSearchValue = searchValue.toLowerCase(); // Convert input to lowercase
+
     fetch(charactersURL)
       .then((response) => response.json())
       .then((data: Character[]) => {
-        const words = searchValue.split(" ");
+        const words = lowercaseSearchValue.split(" "); // Use lowercase search value
         const filteredCharacters = data.filter((character: Character) => {
-          const nameWords = character.name.toLowerCase().split(" ");
+          const lowercaseName = character.name.toLowerCase(); // Convert name to lowercase
+          const nameWords = lowercaseName.split(" ");
           return words.every((word) => nameWords.includes(word));
         });
 
@@ -44,7 +47,8 @@ export const useCharacterSearch = () => {
     const value = event.target.value;
     const words = value.split(" ");
     const filteredCharacters = characters.filter((character: Character) => {
-      const nameWords = character.name.toLowerCase().split(" ");
+      const lowercaseName = character.name.toLowerCase(); // Convert name to lowercase
+      const nameWords = lowercaseName.split(" ");
       return words.every((word) => nameWords.includes(word));
     });
     setMatchingCharacters(filteredCharacters);
