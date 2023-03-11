@@ -332,8 +332,30 @@ input::placeholder {
 }
 /* -------------------------------- */
 /* -------------------------------- */
-
+/* DROPDOWN CHARACTERS */
+.dropdown {
+  padding-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+.dropdown-item {
+  background-color: white;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.dropdown-item:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 3px solid black;
+  color: black;
+}
+/* -------------------------------- */
+/* -------------------------------- */
 /* About */
+
 .about {
   padding-top: 80px;
 

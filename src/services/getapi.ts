@@ -5,7 +5,12 @@ export const useCharacterSearch = () => {
   const charactersURL = "https://hp-api.onrender.com/api/characters";
   const [searchValue, setSearchValue] = useState("");
   const [characters, setCharacters] = useState<Character[]>([]);
+  const [matchingCharacters, setMatchingCharacters] = useState<Character[]>([]);
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(
+    null
+  );
   const [submitted, setSubmitted] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -20,17 +25,50 @@ export const useCharacterSearch = () => {
           const nameWords = character.name.toLowerCase().split(" ");
           return words.every((word) => nameWords.includes(word));
         });
+
+        if (filteredCharacters.length > 1) {
+          setMatchingCharacters(filteredCharacters);
+          setShowDropdown(true);
+          return;
+        }
+
         setCharacters(filteredCharacters);
+        setSelectedCharacter(filteredCharacters[0] || null);
         setSubmitted(true);
+        setShowDropdown(false);
       })
       .catch((error) => console.error(error));
   }
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    const words = value.split(" ");
+    const filteredCharacters = characters.filter((character: Character) => {
+      const nameWords = character.name.toLowerCase().split(" ");
+      return words.every((word) => nameWords.includes(word));
+    });
+    setMatchingCharacters(filteredCharacters);
+    setShowDropdown(filteredCharacters.length > 1);
+    setSearchValue(value);
+    setSelectedCharacter(null);
+  };
+
+  const handleSelectCharacter = (character: Character) => {
+    setSelectedCharacter(character);
+    setCharacters([character]);
+    setSubmitted(true);
+    setShowDropdown(false);
+  };
+
   return {
     searchValue,
     setSearchValue,
-    characters,
+    characters: selectedCharacter ? [selectedCharacter] : [],
+    matchingCharacters,
     submitted,
     handleSubmit,
+    handleInputChange,
+    handleSelectCharacter,
+    showDropdown,
   };
 };
