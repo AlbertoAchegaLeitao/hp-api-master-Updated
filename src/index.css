@@ -38,7 +38,7 @@ body {
 .ball {
   width: 15px;
   height: 15px;
-  background-color: green;
+  background-color: #2e4f4f;
   position: absolute;
   top: 2px;
   left: 2px;
@@ -49,6 +49,9 @@ body {
 .checkbox:checked + .label .ball {
   transform: translateX(10px);
   background-color: white;
+}
+body.light-mode {
+  background-color: white !important;
 }
 
 /* ------------------------------------------ */
