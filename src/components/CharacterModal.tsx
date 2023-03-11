@@ -52,9 +52,6 @@ export const CharacterModal = ({
     >
       <div className="modalcontent">
         <h2>{character.name}</h2>
-        <button className="modalbtn modalbtn2" onClick={handleCloseModal}>
-          Add Favourite
-        </button>
         <img src={character.image} alt={character.name} />
 
         <p>
