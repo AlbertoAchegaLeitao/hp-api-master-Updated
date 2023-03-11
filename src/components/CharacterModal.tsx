@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import { Character } from "../services/types";
+import { AppContext } from "../context/appmode";
 
 interface Props {
   character: Character | null;
@@ -14,6 +15,7 @@ export const CharacterModal = ({
   onAfterClose,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isChecked } = useContext(AppContext);
   useEffect(() => {
     setIsOpen(true);
   }, [character]);
@@ -36,9 +38,9 @@ export const CharacterModal = ({
       transform: "translateX(-50%)",
       width: "350px",
       borderRadius: "30px",
-      backgroundColor: "#0E8388",
+      backgroundColor: isChecked ? "#9394a5" : "#0E8388",
       /* overflow: "hidden", */
-      border: "3px solid #CBE4DE",
+      border: isChecked ? "3px solid #484b6a" : "3px solid #CBE4DE",
     },
   };
 
