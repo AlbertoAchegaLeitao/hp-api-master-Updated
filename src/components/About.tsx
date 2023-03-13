@@ -1,5 +1,4 @@
 import React from "react";
-import founderImage from "../assets/about/founder.jpg";
 
 const About = () => {
   return (
@@ -18,7 +17,11 @@ const About = () => {
           </p>
         </div>
         <div>
-          <img className="aboutimg" src={founderImage} alt="Founder" />
+          <img
+            className="aboutimg"
+            src={require("../assets/about/founder.jpg")}
+            alt="Founder"
+          />
         </div>
       </div>
     </div>
