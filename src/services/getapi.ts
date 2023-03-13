@@ -68,6 +68,11 @@ export const useCharacterSearch = () => {
     setShowDropdown(false);
   };
 
+  const handleButtonClick = () => {
+    // Call handleSubmit when the button is clicked
+    handleSubmit(new Event("submit") as any);
+  };
+
   return {
     searchValue,
     setSearchValue,
@@ -79,5 +84,6 @@ export const useCharacterSearch = () => {
     handleSelectCharacter,
     showDropdown,
     handleCloseDropdown, // Add the new function to the returned object
+    handleButtonClick,
   };
 };

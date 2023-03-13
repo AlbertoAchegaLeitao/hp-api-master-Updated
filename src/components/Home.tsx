@@ -14,6 +14,7 @@ const Home = () => {
     handleSelectCharacter,
     showDropdown,
     handleCloseDropdown, // Add the handleCloseDropdown function
+    handleButtonClick,
   } = useCharacterSearch();
 
   const handleCloseModal = () => {
@@ -33,7 +34,7 @@ const Home = () => {
             onChange={handleInputChange}
           />
           <div className="box-1">
-            <div className="btn btn-one">
+            <div className="btn btn-one" onClick={handleButtonClick}>
               <span>Search</span>
             </div>
           </div>
