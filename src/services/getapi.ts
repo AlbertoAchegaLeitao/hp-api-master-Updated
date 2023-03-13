@@ -63,6 +63,10 @@ export const useCharacterSearch = () => {
     setSubmitted(true);
     setShowDropdown(false);
   };
+  const handleCloseDropdown = () => {
+    // Add a new function to handle closing the dropdown
+    setShowDropdown(false);
+  };
 
   return {
     searchValue,
@@ -74,5 +78,6 @@ export const useCharacterSearch = () => {
     handleInputChange,
     handleSelectCharacter,
     showDropdown,
+    handleCloseDropdown, // Add the new function to the returned object
   };
 };

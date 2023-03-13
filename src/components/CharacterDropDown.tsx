@@ -3,9 +3,13 @@ import { Character } from "../services/types";
 type Props = {
   characters: Character[];
   onSelect: (character: Character) => void;
+  onclose: () => void;
 };
 
-const CharacterDropdown = ({ characters, onSelect }: Props) => {
+const CharacterDropdown = ({ characters, onSelect, onclose }: Props) => {
+  const handleClose = () => {
+    onclose(); // Call the onclose function passed as a prop
+  };
   return (
     <div className="dropdown">
       {characters.map((character) => (
@@ -17,6 +21,9 @@ const CharacterDropdown = ({ characters, onSelect }: Props) => {
           {character.name}
         </div>
       ))}
+      <div className="dropdown-item" onClick={handleClose}>
+        <span className="close-btn">X</span>
+      </div>
     </div>
   );
 };
