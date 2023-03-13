@@ -1,17 +1,35 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
 import Home from "../components/Home";
 import About from "../components/About";
 import Contact from "../components/Contact";
-import { basename } from "path";
+import App from "../App";
 
 const routes = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
-    </Switch>
+    [
+      {
+        path: "/",
+        element: <App />,
+        // errorElement: <ErrorPage />,
+        children: [
+          {
+            index: true,
+            element: <Home />,
+          },
+          {
+            path: "/About",
+            element: <About />,
+          },
+          {
+            path: "/Contact",
+            element: <Contact />,
+          },
+        ],
+      },
+    ],
+    {
+      basename: "/hp-api-master-Updated",
+    }
   );
 };
 
