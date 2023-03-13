@@ -16,6 +16,7 @@ export const useCharacterSearch = () => {
     event.preventDefault();
 
     if (!searchValue) return;
+    setCharacters([]); // Clear previous search results
 
     const lowercaseSearchValue = searchValue.toLowerCase(); // Convert input to lowercase
 
