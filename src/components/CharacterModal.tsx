@@ -41,6 +41,7 @@ export const CharacterModal = ({
       backgroundColor: isChecked ? "#9394a5" : "#0E8388",
       /* overflow: "hidden", */
       border: isChecked ? "3px solid #484b6a" : "3px solid #CBE4DE",
+      zIndex: 1000,
     },
   };
 
