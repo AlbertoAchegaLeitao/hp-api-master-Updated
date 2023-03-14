@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className="homeparent">
       <div className="homecontainer">
-        <h1>Search Characters Here</h1>
+        <h1>Search Harry Potter Characters Here</h1>
         <form className="searchform" onSubmit={handleSubmit}>
           <input
             className="input"

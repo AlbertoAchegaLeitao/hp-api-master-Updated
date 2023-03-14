@@ -10,7 +10,7 @@ const Nav = () => {
     <div className="navbar">
       <div className="linkwrapper">
         <Link to="/" className="active um">
-          Home
+          Api
         </Link>
         <Link to="/about" className="dois">
           About
